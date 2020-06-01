@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import axios from "axios";
+import Character from "./components/Character";
 import './App.css';
 
 const App = () => {
@@ -14,9 +15,10 @@ const App = () => {
 
   useEffect(() => {
     axios
-    .get('https://swapi.py4e.com/api/people')
+    .get('https://swapi.py4e.com/api/people/')
     .then(response => {
       console.log(response);
+      setChars(response.data.results)
     })
     .catch(error => {
       console.log('there was an error', error); 
