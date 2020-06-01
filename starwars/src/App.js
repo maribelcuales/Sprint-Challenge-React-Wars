@@ -17,7 +17,7 @@ const App = () => {
     axios
     .get('https://swapi.py4e.com/api/people/')
     .then(response => {
-      console.log(response);
+      // console.log(response);
       setChars(response.data.results)
     })
     .catch(error => {
@@ -28,6 +28,9 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
+      {chars.map(char => {
+        return <Character />;
+      })}
     </div>
   );
 }
