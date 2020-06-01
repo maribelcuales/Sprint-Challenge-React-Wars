@@ -29,7 +29,16 @@ const App = () => {
     <div className="App">
       <h1 className="Header">Characters</h1>
       {chars.map(char => {
-        return <Character />;
+        return <Character 
+          name={char.name}
+          birthYear = {char.birth_year}
+          height = {char.height}
+          mass = {char.mass}
+          hairColor = {char.hair_color}
+          skinColor = {char.skin_color}
+          eyeColor = {char.eye_color}
+          gender={char.gender} 
+          />;
       })}
     </div>
   );
