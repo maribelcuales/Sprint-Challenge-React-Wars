@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from "react";
 import axios from "axios";
 import Character from "./components/Character";
-import { Container } from "reactstrap";
+import { Container, Row } from "reactstrap";
 import "./App.css";
 
 const App = () => {
@@ -27,22 +27,24 @@ const App = () => {
   }, []);
 
   return (
-    <Container className="themed-container" fluid={true}>
-      <div className="App">
-        <h1 className="Header">Characters</h1>
-        {chars.map(char => {
-          return <Character 
-            name={char.name}
-            birthYear = {char.birth_year}
-            height = {char.height}
-            mass = {char.mass}
-            hairColor = {char.hair_color}
-            skinColor = {char.skin_color}
-            eyeColor = {char.eye_color}
-            gender={char.gender} 
-            />;
-        })}
-      </div>
+    <Container>
+      <Row>
+        {/* <div className="App"> */}
+          <h1 className="Header">Characters</h1>
+          {chars.map(char => {
+            return <Character 
+              name={char.name}
+              birthYear = {char.birth_year}
+              height = {char.height}
+              mass = {char.mass}
+              hairColor = {char.hair_color}
+              skinColor = {char.skin_color}
+              eyeColor = {char.eye_color}
+              gender={char.gender} 
+              />;
+          })}
+        {/* </div> */}
+      </Row>
     </Container>
   );
 }
