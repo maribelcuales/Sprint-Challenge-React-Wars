@@ -9,7 +9,8 @@ const Header = styled.h1`
   text-align: center;
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
-  background-color: yellow; 
+  padding-top: 30px;
+  padding-bottom: 30px;
 `;
 
 const App = () => {
@@ -38,10 +39,7 @@ const App = () => {
     <Container>
       <Row>
         <Col>
-        {/* <div className="App"> */}
-          {/* <h1 className="Header">Characters</h1> */}
           <Header>Characters</Header>
-        {/* </div> */}
         </Col>
       </Row>
       <Row>
