@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from "react";
 import axios from "axios";
 import Character from "./components/Character";
+import { Container } from "reactstrap";
 import "./App.css";
 
 const App = () => {
@@ -26,7 +27,7 @@ const App = () => {
   }, []);
 
   return (
-    <div >
+    <Container className="themed-container" fluid={true}>
       <div className="App">
         <h1 className="Header">Characters</h1>
         {chars.map(char => {
@@ -42,7 +43,7 @@ const App = () => {
             />;
         })}
       </div>
-    </div>
+    </Container>
   );
 }
 

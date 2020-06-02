@@ -9,9 +9,9 @@ const Character = (props) => {
       <p>Born: {props.birthYear}</p>
       <p>Height: {props.height}</p>
       <p>Weight: {props.mass}</p>
-      <p>Hair Color: {props.hair_color}</p>
-      <p>Skin Color: {props.skin_color}</p>
-      <p>Eye Color: {props.eye_color}</p>
+      <p>Hair Color: {props.hairColor}</p>
+      <p>Skin Color: {props.skinColor}</p>
+      <p>Eye Color: {props.eyeColor}</p>
       <p>Gender: {props.gender}</p>
     </div>
   )
