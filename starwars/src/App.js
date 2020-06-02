@@ -1,7 +1,7 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect} from "react";
 import axios from "axios";
 import Character from "./components/Character";
-import './App.css';
+import "./App.css";
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -26,20 +26,22 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
-      <h1 className="Header">Characters</h1>
-      {chars.map(char => {
-        return <Character 
-          name={char.name}
-          birthYear = {char.birth_year}
-          height = {char.height}
-          mass = {char.mass}
-          hairColor = {char.hair_color}
-          skinColor = {char.skin_color}
-          eyeColor = {char.eye_color}
-          gender={char.gender} 
-          />;
-      })}
+    <div >
+      <div className="App">
+        <h1 className="Header">Characters</h1>
+        {chars.map(char => {
+          return <Character 
+            name={char.name}
+            birthYear = {char.birth_year}
+            height = {char.height}
+            mass = {char.mass}
+            hairColor = {char.hair_color}
+            skinColor = {char.skin_color}
+            eyeColor = {char.eye_color}
+            gender={char.gender} 
+            />;
+        })}
+      </div>
     </div>
   );
 }
