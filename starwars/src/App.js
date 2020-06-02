@@ -1,8 +1,16 @@
 import React, { useState, useEffect} from "react";
 import axios from "axios";
 import Character from "./components/Character";
-import { Container, Row } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
+import styled from "styled-components"; 
 import "./App.css";
+
+const Header = styled.h1`
+  text-align: center;
+  color: #443e3e;
+  text-shadow: 1px 1px 5px #fff;
+  background-color: yellow; 
+`;
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -29,21 +37,26 @@ const App = () => {
   return (
     <Container>
       <Row>
+        <Col>
         {/* <div className="App"> */}
-          <h1 className="Header">Characters</h1>
-          {chars.map(char => {
-            return <Character 
-              name={char.name}
-              birthYear = {char.birth_year}
-              height = {char.height}
-              mass = {char.mass}
-              hairColor = {char.hair_color}
-              skinColor = {char.skin_color}
-              eyeColor = {char.eye_color}
-              gender={char.gender} 
-              />;
-          })}
+          {/* <h1 className="Header">Characters</h1> */}
+          <Header>Characters</Header>
         {/* </div> */}
+        </Col>
+      </Row>
+      <Row>
+        {chars.map(char => {
+          return <Character 
+            name={char.name}
+            birthYear = {char.birth_year}
+            height = {char.height}
+            mass = {char.mass}
+            hairColor = {char.hair_color}
+            skinColor = {char.skin_color}
+            eyeColor = {char.eye_color}
+            gender={char.gender} 
+            />;
+        })}
       </Row>
     </Container>
   );
