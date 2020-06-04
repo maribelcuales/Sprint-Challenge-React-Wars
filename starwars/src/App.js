@@ -7,10 +7,10 @@ import "./App.css";
 
 const Header = styled.h1`
   text-align: center;
-  color: #443e3e;
-  text-shadow: 1px 1px 5px #fff;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  text-shadow: 1px 1px 5px black;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: yellow;
 `;
 
 const App = () => {
@@ -39,7 +39,7 @@ const App = () => {
     <Container>
       <Row>
         <Col>
-          <Header>Characters</Header>
+          <Header>Star Wars Characters</Header>
         </Col>
       </Row>
       <Row>
