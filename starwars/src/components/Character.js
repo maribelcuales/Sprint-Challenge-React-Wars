@@ -10,12 +10,19 @@ import {
   Badge,
   Col
 } from "reactstrap";
+import styled, { css } from  "styled-components";
+import "./Character.css";
+
+const CardStyle = styled(CardHeader)`
+  border: 1px orange;
+  color: violet; 
+` 
 
 const Character = (props) => {
   return (
     <Col xs="10" sm="5" md="4" xl="3">
       <Card>
-        <CardHeader> 
+        <CardHeader className="card-header"> 
           {props.name} 
         </CardHeader>
         <CardBody>
