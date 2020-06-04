@@ -13,19 +13,14 @@ import {
 import styled, { css } from  "styled-components";
 import "./Character.css";
 
-const CardStyle = styled(CardHeader)`
-  border: 1px orange;
-  color: violet; 
-` 
-
 const Character = (props) => {
   return (
     <Col xs="10" sm="5" md="4" xl="3">
-      <Card>
+      <Card className="card-container">
         <CardHeader className="card-header"> 
           {props.name} 
         </CardHeader>
-        <CardBody>
+        <CardBody className="card-body">
           <CardText> Born: {props.birthYear}
           </CardText>
           <CardText>Height: {props.height}</CardText>

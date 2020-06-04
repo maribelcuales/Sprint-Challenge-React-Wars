@@ -1,8 +1,18 @@
+.card-container {
+  margin-bottom: 40px; 
+}
+
 .card-header {
   background-color: papayawhip;
-  border: 1px orange;
-  color: violet; 
+  color: #F6DA22;
   text-align: center;
   font-weight: 700;
   font-size: 18px;
+}
+
+.card-body{ 
+  background-color: orange;
+  opacity: .7;
+  text-align: center;
+  color: #1F154F;
 }
