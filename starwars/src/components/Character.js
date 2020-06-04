@@ -13,7 +13,7 @@ import {
 
 const Character = (props) => {
   return (
-    <Col xl="3">
+    <Col xs="10" sm="5" md="4" xl="3">
       <Card>
         <CardHeader> 
           {props.name} 
